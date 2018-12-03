@@ -45,7 +45,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
 					<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-
+						
 						<td class="td_shop_table product-remove">
 							<?php
 								// @codingStandardsIgnoreLine
@@ -62,12 +62,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 									<path class="trash-line" d="M13.8,6.3V18"/>
 									<path class="trash-line" d="M5.5,2.6l1.9-2.4C7.5,0.1,7.6,0,7.8,0h4.6c0.1,0,0.3,0.1,0.4,0.2l1.8,2.4"/>
 									</svg>
-									 </a>',
+									</a>',
 									esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 									__( 'Remove this item', 'woocommerce' ),
 									esc_attr( $product_id ),
 									esc_attr( $_product->get_sku() )
-									//esc_attr( get_template_part('assets/img/inline/trash') )
 								), $cart_item_key );
 							?>
 						</td>
